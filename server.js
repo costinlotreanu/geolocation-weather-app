@@ -9,7 +9,7 @@ const database = new Datastore({ filename: 'database.db' });
 // loading database
 database.loadDatabase();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 //MIDDLEWARE
 app.use(express.static(`public`));
