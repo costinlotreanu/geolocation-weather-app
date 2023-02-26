@@ -311,7 +311,7 @@ text-decoration: none;
 
 
 /* --------------------- MEDIA QUERIES -------------------------*/
-@media (min-width: 400px) {
+@media (min-width: 372px) {
     .mark--red::after {
         top: 1rem;
         right: 1rem;
