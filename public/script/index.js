@@ -22,6 +22,8 @@ sendBtn.addEventListener(`click`, saveInDb);
 weatherBtn.addEventListener(`click`, showWeather);
 weatherBtn.addEventListener(`click`, storingWeatherInfo);
 
+// --------------------------------------------------------------------------
+
 // HELPER FUNCTION
 export function showWeatherMessage(className, message, time) {
   weatherMessage.classList.add(className);
