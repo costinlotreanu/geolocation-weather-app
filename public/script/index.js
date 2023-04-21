@@ -1,7 +1,6 @@
 import { findMyLocation } from './functions/findMyLocation.js';
 import { saveInDb } from './functions/saveInDb.js';
 import { showWeather } from './functions/showWeather.js';
-import { storingWeatherInfo } from './functions/storingWeatherInfo.js';
 
 const findBtn = document.querySelector(`#findBtn`);
 const sendBtn = document.querySelector(`#sendBtn`);
