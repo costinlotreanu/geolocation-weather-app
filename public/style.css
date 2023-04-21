@@ -1,0 +1,377 @@
+/* ---------------------- GENERAL SELECTORS ---------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background-image: radial-gradient(circle, #2e2c46, #292740, #24233a, #201e35, #1b1a2f);
+    color: white;
+    font-size: 1rem;
+}
+
+form {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    margin-top: 3rem;
+    padding: 0 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+p {
+    margin: .1rem;
+}
+
+a {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* ------------------- MAIN BREADCRUMB (Home and DB Entries) ------------------- */
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.breadcrumb__item {
+    position: relative;
+    margin: 0 1rem;
+    color: #a6a4ba;
+}
+
+.breadcrumb__item--active::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 8px;
+    background-color: rgb(144, 0, 255);
+    left: -0.2rem;
+    bottom: 0.5rem;
+    z-index: -1;
+}
+
+.breadcrumb__item:hover {
+    color: white;
+}
+
+
+.location__container {
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a6a4ba;
+
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.location__container:first-child {
+    margin-bottom: 0.5rem;
+}
+
+/* ---------------------- BUTTONS AND MESSAGES PROMPT ------------------------- */
+
+.info {
+    position: absolute;
+    margin-top: 0.5rem;
+    display: block;
+    max-width: fit-content;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    color: #2C2A44;
+    background-color: rgb(180, 255, 139);
+}
+
+.infoWeather {
+    margin-top: 0.5rem;
+    display: block;
+    max-width: fit-content;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    color: rgb(38, 38, 35);
+    background-color: rgb(250, 89, 103);
+}
+
+.infoAlert {
+    position: absolute;
+    margin-top: 0.5rem;
+    display: block;
+    max-width: fit-content;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    color: #2C2A44;
+    background-color: rgba(255, 53, 70, 0.802);
+}
+
+.button {
+    margin: 0 2em;
+    padding: 1em 2.7em;
+    background-color: #2A2841;
+    color: rgba(245, 245, 245, 0.79);
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid #a6a4ba;
+    border-radius: 3rem;
+}
+
+.button__up {
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+.mark--red {
+    position: relative;
+}
+
+.mark--red::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    border-radius: 50px;
+    background-image: radial-gradient( circle 602px at 2.1% 5.1%,  rgba(233,0,120,1) 0%, rgba(0,0,0,1) 90.1% );
+}
+
+.mark--green {
+    position: relative;
+}
+
+.mark--green::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    border-radius: 50px;
+    background-image: radial-gradient( circle 935px at 3.1% 5.8%,  rgba(182,255,139,1) 0%, rgba(8,88,127,1) 100.2% );
+}
+
+.button__down {
+    margin-bottom: 1em;
+}
+
+.button:hover {
+    background-color: #24C1DC;
+    border-color: #24C1DC;
+    color: white;
+}
+
+.button:active {
+    background-color: #2bdfff;
+    color: white;
+}
+
+/* ----------------------- SEND BUTTON --------------------------- */
+
+.grid__center {
+    display: grid;
+    place-content: center;
+}
+
+.form {
+    display: grid;
+    place-content: center;
+}
+         
+.button__send {
+    margin: 0 2em;
+    padding: 1em 1.5em;
+    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%);
+    background-size: 200% auto;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border: 2px solid #a6a4ba;          
+    box-shadow: 0 0 20px #a6a4babf;
+    border-radius: 10px;
+    font-size: 1.2rem;
+  }
+
+.button__send:hover {
+background-position: right center;
+color: #fff;
+text-decoration: none;
+}
+
+
+/* ------------------------- MAP ------------------------------- */
+
+#map {
+    margin: 2rem;
+    padding: 0.5rem;
+    border: 5px dashed #28263F;
+    border-radius: 1.5rem;
+    height: 300px;
+}
+
+/* ---------------------- VIEW DATA BASE PAGE ------------------------ */
+
+.view__db {
+    margin-top: 2rem;
+}
+
+.view__db div {
+    color: rgb(211, 198, 198);
+    display: block;
+    margin: 1rem 0.75rem;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(82, 77, 74, 0.815);
+
+}
+
+.view__db p {
+    margin: 1rem;
+}
+
+.database--title {
+    padding: 0 0 1rem;
+    font-size: 1.5rem;
+    color: #a6a4ba;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ---------------------- WEATHER DATA INFORMATION ----------------------- */
+
+.weatherData {
+    max-width: 550px;
+    position: absolute;
+}
+
+.weatherData__title {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(204, 131, 249);
+    text-align: center;
+    margin-bottom: -1rem;
+}
+
+.weather__item--localTime {
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #7c7a9c;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.weather__item {
+    text-align: center;
+}
+
+.weather__item--margin {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(101, 55, 130, 0.746);
+}
+
+.weather__item--title {
+    font-size: 1.5rem;
+    color: #a6a4ba;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.weather__item--content {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* --------------------- MEDIA QUERIES -------------------------*/
+
+@media (min-width: 372px) {
+    .mark--red::after {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .mark--green::after {
+        top: 1rem;
+        right: 1rem;
+    }
+} 
+
+@media (min-width: 33rem) {
+    .breadcrumb__item {
+        font-size: 1.75rem;
+    }
+
+    .button {
+        padding: 1em 3em;
+        font-size: 1.5rem;
+    }
+
+    .location__container {
+        position: relative;
+        font-size: 2rem;
+    }
+
+    .button__send {
+        font-size: 1.4rem;
+    }
+
+    #map {
+        min-width: 500px;
+        height: 500px;
+    }
+
+    .mark--red::after {
+        width: 3rem;
+        height: 3rem;
+        top: 1rem;
+        right: 1.5rem;
+    }
+
+    .mark--green::after {
+        width: 3rem;
+        height: 3rem;
+        top: 1rem;
+        right: 1.5rem;
+    }
+
+}
+
+@media (min-width: 64rem) {
+
+    .flex__container {
+        margin: 1rem;
+        display: flex;
+    }
+
+    #map {
+        height: 700px;
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "geolocation-weather-app",
+  "version": "1.0.0",
+  "description": "This is a data selfie app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "data",
+    "selfie",
+    "app"
+  ],
+  "author": "Costin Lotreanu",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

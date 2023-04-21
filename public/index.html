@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    
+    <script type="module" src="script/index.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+</head>
+<body>
+    
+    <h1>Geolocation Weather App</h1>
+    
+    <div class="breadcrumb">
+        <a class="breadcrumb__item breadcrumb__item--active" href="/">Home</a>
+        <a class="breadcrumb__item" href="/viewData.html">Database entries</a>
+    </div>
+    
+    <div class="grid__center">
+        <button id="findBtn" class="button button__up">Find My Location</button>
+        <button id="weatherBtn" class="button button__down mark--red">Show Weather</button>
+    </div>
+    
+    <div id="location__container" class="location__container">
+        <p id="weatherMessage"></p>
+        <p id="lat"></p>
+        <p id="long"></p>
+    </div>
+
+    <form id="sendForm" class="form"  method="POST">
+        <button id="sendBtn" class="button__send" type="submit">Save in Database</button>
+    </form>
+
+    <div class="flex__container">
+        <div class="map__container">
+            <div id="map"></div>
+        </div>
+        
+        <div id="weatherInfoContainer" class="weatherData">
+            <h2 id="weatherTitle" class="weatherData__title"></h2>
+            <p id="localTime" class="weather__item--localTime"></p>
+            
+            <div id="weatherItem" class="weather__item">
+                <p id="currentTempTitle" class="weather__item--title"></p>
+                <p id="currentTemp" class="weather__item--content"></p>
+            </div>
+            
+            <div id="weatherItem" class="weather__item">
+                <p id="weatherCodeTitle" class="weather__item--title"></p>
+                <p id="weatherCode" class="weather__item--content"></p>
+            </div>
+        
+             <div id="weatherItem" class="weather__item">
+                <p id="windSpeedTitle" class="weather__item--title"></p>
+                <p id="windSpeed" class="weather__item--content"></p>
+            </div>
+        
+            <div id="weatherItem" class="weather__item">
+                <p id="windDirTitle" class="weather__item--title"></p>
+                <p id="windDir" class="weather__item--content"></p>
+            </div>
+        
+        </div>
+    </div>
+    
+</body>
+</html>
